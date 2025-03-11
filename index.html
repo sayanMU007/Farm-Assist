@@ -1,13 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm Assist</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Farm-Assist</h1> <i class="fa-solid fa-tractor"></i>
+        </div>
+
+        <p id="lastUpdated" class="last-updated">Last updated: Loading...</p>
+
+        <div class="sensor-grid">
+            <div class="sensor-card">
+                <h3>Temperature</h3>
+                <p id="temperature" class="sensor-value">--°C</p>
+            </div>
+            <div class="sensor-card">
+                <h3>Humidity</h3>
+                <p id="humidity" class="sensor-value">--%</p>
+            </div>
+        </div>
+        
+        <button id="connectButton">Connect to Bluetooth</button>
+        <p id="dataDisplay">No sensor data yet.</p>
+
+        <div class="recommendations">
+            <h2>Recommended Crops</h2>
+            <div id="recommendationsList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
